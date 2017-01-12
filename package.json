@@ -1,0 +1,22 @@
+{
+  "name": "webpack-config",
+  "version": "1.0.0",
+  "description": "Exemplo de configuração do Webpack",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barraponto/webpack-config.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Capi Etheriel <barraponto@gmail.com> (https://barraponto.blog.br)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/barraponto/webpack-config/issues"
+  },
+  "homepage": "https://github.com/barraponto/webpack-config#readme"
+}
