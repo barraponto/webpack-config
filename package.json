@@ -4,6 +4,7 @@
   "description": "Exemplo de configuração do Webpack",
   "main": "src/index.js",
   "scripts": {
+    "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,8 @@
   "homepage": "https://github.com/barraponto/webpack-config#readme",
   "devDependencies": {
     "webpack": "beta"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
   }
 }
