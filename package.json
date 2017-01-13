@@ -33,6 +33,7 @@
     "webpack": "beta"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "underscore": "^1.8.3"
   }
 }

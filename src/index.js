@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import _ from 'underscore';
 
 document.addEventListener('DOMContentLoaded', function() {
