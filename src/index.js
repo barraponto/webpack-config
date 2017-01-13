@@ -1,4 +1,4 @@
-var underscore = require('underscore');
+import _ from 'underscore';
 
 document.addEventListener('DOMContentLoaded', function(){
   console.log('Hello World!');

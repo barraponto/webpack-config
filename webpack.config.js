@@ -6,5 +6,20 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'app.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            // {modules:false} é a parte crucial para ativar o tree-shaking
+            options: {presets: [['es2015', {modules: false}]]},
+          },
+        ],
+      },
+    ]
   }
 };
