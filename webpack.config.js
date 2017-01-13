@@ -1,5 +1,6 @@
 /* eslint-env node */
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // Use path.join para evitar problemas com o Windows
@@ -53,4 +54,5 @@ module.exports = {
       },
     ],
   },
+  plugins: [new HtmlWebpackPlugin()],
 };
