@@ -26,6 +26,31 @@ module.exports = {
         enforce: 'pre',
         use: [{loader: 'eslint-loader'}],
       },
+      {
+        test: /\.css$/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+        ],
+      },
+      {
+        test: /\.(eot|otf|svg|ttf|woff|woff2)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {name: 'fonts/[name].[ext]'},
+          },
+        ],
+      },
+      {
+        test: /\.(gif|jpg|png|webp)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {name: 'images/[name].[ext]'},
+          },
+        ],
+      },
     ],
   },
 };
