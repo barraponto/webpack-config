@@ -1,3 +1,4 @@
+/* eslint-env node */
 const path = require('path');
 
 module.exports = {
@@ -5,7 +6,7 @@ module.exports = {
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'app.js'
+    filename: 'app.js',
   },
   module: {
     rules: [
@@ -20,6 +21,11 @@ module.exports = {
           },
         ],
       },
-    ]
-  }
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: [{loader: 'eslint-loader'}],
+      },
+    ],
+  },
 };
