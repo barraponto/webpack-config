@@ -1,9 +1,11 @@
-import './index.css';
-import _ from 'underscore';
+import 'bootstrap/dist/css/bootstrap.css';
+import Vue from 'vue';
+import UI from './components/app.vue';
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('Hello World!'); // eslint-disable-line no-console
-  _.each([1, 2, 3, 4, 5], function(number) {
-    console.log(number); // eslint-disable-line no-console
+  // eslint-disable no-new
+  new Vue({
+    el: '#app',
+    render: (h) => h(UI),
   });
 });
