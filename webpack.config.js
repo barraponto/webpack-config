@@ -14,17 +14,13 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            // {modules:false} é a parte crucial para ativar o tree-shaking
-            options: {presets: [['es2015', {modules: false}]]},
-          },
-        ],
+        // configurações em .babelrc
+        use: [{loader: 'babel-loader'}],
       },
       {
         test: /\.js$/,
         enforce: 'pre',
+        // configurações em .eslintrc.js
         use: [{loader: 'eslint-loader'}],
       },
       {
@@ -33,12 +29,11 @@ module.exports = {
           {loader: 'style-loader'},
           {
             loader: 'css-loader',
-            options: {
-              // roda o loader anterior (postcss) nos css @importados também.
-              importLoaders: 1,
-            },
+            // roda 1 loader anterior (postcss) nos css @importados também.
+            options: {importLoaders: 1},
           },
-          {loader: 'postcss-loader'}, // a configuração está em postcss.config.js
+          // configuração em postcss.config.js
+          {loader: 'postcss-loader'},
         ],
       },
       {
