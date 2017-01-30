@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  devtool: 'eval-source-map',
   // Use path.join para evitar problemas com o Windows
   entry: path.join(__dirname, 'src', 'index.js'),
   output: {
@@ -30,7 +31,7 @@ module.exports = {
           {
             loader: 'css-loader',
             // roda 1 loader anterior (postcss) nos css @importados também.
-            options: {importLoaders: 1},
+            options: {importLoaders: 1, sourceMap: true},
           },
           // configuração em postcss.config.js
           {loader: 'postcss-loader'},
