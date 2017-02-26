@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "eslint-plugin-vue": "^2.0.1",
     "vue": "^2.1.8"
   }
 }
