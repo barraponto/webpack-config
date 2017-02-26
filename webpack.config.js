@@ -24,7 +24,7 @@ module.exports = {
         use: [{loader: 'babel-loader'}],
       },
       {
-        test: /\.(js|vue)/,
+        test: /\.(js|vue)$/,
         enforce: 'pre',
         // configurações em .eslintrc.js
         use: [{loader: 'eslint-loader'}],
